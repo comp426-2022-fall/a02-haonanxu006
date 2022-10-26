@@ -32,8 +32,8 @@ if(args.e){
 }
 
 let timezone;
-if(args.z){
-    timezone = args.z;
+if(args.t){
+    timezone = args.t;
 } else {
     timezone = moment.tz.guess();
 }
