@@ -37,6 +37,7 @@ if(args.t){
 } else {
     timezone = moment.tz.guess();
 }
+timezone.replace("/", "%2");
 
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + String(latitude) + '&longitude=' + String(longitude) + '&hourly=temperature_2m&daily=precipitation_hours&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=' + timezone);
 
